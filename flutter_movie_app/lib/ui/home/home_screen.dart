@@ -53,11 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Color(0xff1b1b1b),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.movie),
             label: "Movies",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.tv),
             label: "Tv Series",
           ),
           BottomNavigationBarItem(
