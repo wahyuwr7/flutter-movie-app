@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sleek_circular_slider/sleek_circular_slider.dart';
-
 import '../home/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,62 +18,36 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               opacity: 30,
-              image: AssetImage("assets/img/bg_splash.png"),
+              image: AssetImage("assets/img/bg_splash.jpg"),
               fit: BoxFit.cover,
             ),
           ),
           child: ListView(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 120),
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const Card(
-                    elevation: 2,
-                    child: Image(
-                      image: AssetImage('assets/img/logo.png'),
-                      width: 125,
-                      height: 125,
-                    ),
+                children: const <Widget>[
+                  Image(
+                    image: AssetImage('assets/img/logo.png'),
+                    width: 125,
+                    height: 125,
                   ),
-                  const SizedBox(
-                    height: 275,
+                  SizedBox(
+                    height: 40,
                   ),
-                  const Text(
+                  Text(
                     'Flutter Movie App',
                     style: TextStyle(fontSize: 20.0, color: Colors.white),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 10,
                   ),
-                  const Text(
+                  Text(
                     'Made by Wahyu Ramadhan',
                     style: TextStyle(fontSize: 20.0, color: Colors.white),
                   ),
-                  const Padding(padding: EdgeInsets.only(top: 20.0)),
-                  SleekCircularSlider(
-                    min: 0,
-                    max: 100,
-                    initialValue: 100,
-                    appearance: CircularSliderAppearance(
-                      size: 100,
-                      infoProperties: InfoProperties(
-                          mainLabelStyle: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 20,
-                      )),
-                      customColors: CustomSliderColors(
-                          dotColor: Colors.white,
-                          progressBarColor: Colors.black,
-                          shadowColor: Colors.white,
-                          trackColor: Colors.white),
-                      spinnerDuration: 10,
-                      animDurationMultiplier: 1.3,
-                      animationEnabled: true,
-                      startAngle: 90.0,
-                      angleRange: 360,
-                    ),
-                  ),
+                  Padding(padding: EdgeInsets.only(top: 20.0)),
                 ],
               ),
             ],
@@ -91,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    startTimer();
+    // startTimer();
   }
 
   startTimer() async {
